@@ -1,0 +1,154 @@
+/* Ensure the container fills the available space */
+.app {
+    display: flex;
+    flex-direction: column;
+    background-color:rgba(0, 128, 255, 0.048);
+  }
+  .app_NavBar{
+    padding: 10px;
+    box-sizing: border-box;
+    margin-right: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.537);
+    width: 160px;
+    height: 40px;
+    padding-left: 40px;
+    position: relative;
+    left: 10px;
+    border-radius: 5px;
+  }
+ .NavBar2{
+  background-color:rgba(0, 140, 255, 0.025);
+  position: relative;
+  width: 270px;
+  bottom: 20px;
+  right: 40px;
+  border-radius: 5px;
+  padding: 8px;
+  height: 200px;
+  z-index: 2;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+ }
+  .boundary{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.077);
+    background-color: white;
+    display: flex;
+    align-items: center;
+  }
+  /* Container for the ticket columns */
+  .ticket-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto; /* Allows horizontal scrolling if columns overflow */
+    padding: 10px;
+    margin-top: 40px;
+    z-index: 0;
+  }
+  
+  /* Ticket columns */
+  .ticket-column {
+    flex: 1; /* Allows columns to grow and shrink */
+    min-width: 50px; /* Ensures columns don’t get too narrow */
+    margin: 0 10px;
+
+  }
+  .count{
+    color: rgb(59, 59, 59);
+  }
+  /* Cards within columns */
+  .card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    position: relative; /* Ensure the image can be positioned absolutely within the card */
+  }
+  
+  /* Media Queries for responsiveness */
+  @media (max-width: 1200px) {
+    .ticket-container {
+      flex-direction: row;
+    }
+    .ticket-column {
+      min-width: 150px; /* Adjust based on screen width */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .ticket-container {
+      flex-direction: column;
+      overflow-x: hidden; /* Disable horizontal scrolling */
+    }
+    .ticket-column {
+      width: 100%;
+      min-width: auto; /* Allow columns to take full width */
+      margin: 10px 0; /* Space between columns vertically */
+    }
+  }
+#display{
+    font-size: 15px;
+    position: relative;
+    left: 30px;
+    color: #0a0a0ac3;
+    padding-left: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#grouping {
+    color: rgb(149, 146, 146);
+    padding-right: 120px;
+    margin-bottom: 40px;
+}
+#ordering {
+    color: rgb(149, 146, 146);
+    padding-right: 120px;
+  }
+#order{
+  display: block;
+}
+#sorting{
+    margin: 3px;
+}
+.app_NavBar {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .toggle-header {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgba(21, 21, 21, 0.852);
+    position: relative;
+    bottom: 20px;
+    right: -5px;
+    margin: 0;
+    padding-right: 5px;
+  }
+  
+  
+  .logo-header{
+    position: absolute;
+    top: -3px; /* Adjust positioning as needed */
+    left: -20px; /* Adjust positioning as needed */
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  #display-img{
+    width: 20px;
+    position: relative;
+    left: -30px;
+  }
+  #add{
+    position: absolute;
+    right: 80px;
+  }
+  #dot3{
+    position: absolute;
+    right: 50PX;
+  }
